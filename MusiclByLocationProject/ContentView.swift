@@ -12,8 +12,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(state.artistNames)
-            Text("You are in: \(state.lastKnownsubLocality)\n \(state.lastKnownLocality)\n\(state.lastKnownCountry)")
+            Text("You are in: \n\(state.lastKnownsubLocality)\n \(state.lastKnownLocality)\n\(state.lastKnownCountry)")
                 .padding()
+            Form {
+                Text("Music search based on:\(state.lastKnownCountry)")
+                Text(state.artistNames)
+            }
             Spacer()
             Button("Find Music", action: {state.findMusic()})
         }.onAppear(perform: {

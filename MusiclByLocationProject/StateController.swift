@@ -25,7 +25,7 @@ class stateController: ObservableObject {
     }
     
     func getArtists() {
-       guard let url = URL(string: "https://itunes.apple.com/search?term=Lionel%20Richie&entity=musicArtist")
+       guard let url = URL(string: "https://itunes.apple.com/search?term=\(lastKnownCountry)&entity=musicArtist")
         else {
             print("Invalid URL")
             return
@@ -40,7 +40,7 @@ class stateController: ObservableObject {
                         return $0.name
                     }
                     
-                    DispatchQueue.main.sync {
+                    DispatchQueue.main.async {
                         self.artistNames = names.joined(separator: ", ")
                     }
                 }
