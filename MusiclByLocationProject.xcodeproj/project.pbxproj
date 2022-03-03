@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C22E5A327D01DE7001A81E3 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C22E5A227D01DE7001A81E3 /* StateController.swift */; };
+		4C596B7627D0B3D300A7352A /* ArtistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C596B7527D0B3D300A7352A /* ArtistResponse.swift */; };
+		4C596B7827D0B3F900A7352A /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C596B7727D0B3F900A7352A /* Artist.swift */; };
 		4CF8C1A427CFF192003F53B9 /* MusiclByLocationProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8C1A327CFF192003F53B9 /* MusiclByLocationProjectApp.swift */; };
 		4CF8C1A627CFF192003F53B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8C1A527CFF192003F53B9 /* ContentView.swift */; };
 		4CF8C1A827CFF194003F53B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8C1A727CFF194003F53B9 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		4C22E5A127D00E38001A81E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C22E5A227D01DE7001A81E3 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		4C596B7527D0B3D300A7352A /* ArtistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistResponse.swift; sourceTree = "<group>"; };
+		4C596B7727D0B3F900A7352A /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4CF8C1A027CFF192003F53B9 /* MusiclByLocationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusiclByLocationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF8C1A327CFF192003F53B9 /* MusiclByLocationProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiclByLocationProjectApp.swift; sourceTree = "<group>"; };
 		4CF8C1A527CFF192003F53B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C596B7427D0B3BA00A7352A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C596B7527D0B3D300A7352A /* ArtistResponse.swift */,
+				4C596B7727D0B3F900A7352A /* Artist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4CF8C19727CFF192003F53B9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		4CF8C1A227CFF192003F53B9 /* MusiclByLocationProject */ = {
 			isa = PBXGroup;
 			children = (
+				4C596B7427D0B3BA00A7352A /* Model */,
 				4C22E5A127D00E38001A81E3 /* Info.plist */,
 				4CF8C1A327CFF192003F53B9 /* MusiclByLocationProjectApp.swift */,
 				4CF8C1A527CFF192003F53B9 /* ContentView.swift */,
@@ -265,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C596B7827D0B3F900A7352A /* Artist.swift in Sources */,
 				4CF8C1A627CFF192003F53B9 /* ContentView.swift in Sources */,
+				4C596B7627D0B3D300A7352A /* ArtistResponse.swift in Sources */,
 				4C22E5A327D01DE7001A81E3 /* StateController.swift in Sources */,
 				4CF8C1A427CFF192003F53B9 /* MusiclByLocationProjectApp.swift in Sources */,
 				4CF8C1CE27CFF1E4003F53B9 /* LocationManager.swift in Sources */,

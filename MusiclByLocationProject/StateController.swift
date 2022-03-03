@@ -12,6 +12,8 @@ class stateController: ObservableObject {
     @Published var lastKnownLocality : String = ""
     @Published var lastKnownCountry : String = ""
     @Published var lastKnownsubLocality: String = ""
+    @Published var artistNames : String = ""
+    
     let locationHandler = LocationHandler()
     
     func findMusic() {
@@ -33,9 +35,33 @@ class stateController: ObservableObject {
         
         URLSession.shared.dataTask(with: request) {(data,response,error) in
             if let data = data {
-                print(String(decoding : data, as: UTF8.self))
+                if let response = self.parseJSON(json: data) {
+                    let names = response.results.map {
+                        return $0.name
+                    }
+                    
+                    DispatchQueue.main.sync {
+                        self.artistNames = names.joined(separator: ", ")
+                    }
+                }
             }
         }.resume()
+    }
+    
+    func parseJSON(json:Data) -> ArtistResponse? {
+        let decoder = JSONDecoder()
+        if let artistResponse = try? decoder.decode(ArtistResponse.self, from: json) {
+            return artistResponse
+        } else {
+            print("ERROR DECODING JSON")
+            return nil
+        }
+        
+        
+        
+        
+        
+        
     }
     
 }

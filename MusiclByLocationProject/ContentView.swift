@@ -11,7 +11,8 @@ struct ContentView: View {
     @StateObject private var  state = stateController()
     var body: some View {
         VStack {
-            Text("You are in \(state.lastKnownsubLocality), \(state.lastKnownLocality),\(state.lastKnownCountry)")
+            Text(state.artistNames)
+            Text("You are in: \(state.lastKnownsubLocality)\n \(state.lastKnownLocality)\n\(state.lastKnownCountry)")
                 .padding()
             Spacer()
             Button("Find Music", action: {state.findMusic()})
